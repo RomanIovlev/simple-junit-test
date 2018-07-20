@@ -1,0 +1,33 @@
+buildscript {
+    repositories {
+        maven {
+            url "http://central.maven.org/maven2"
+        }
+        jcenter()
+    }
+    dependencies {
+        classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.5.1"
+    }
+}
+
+apply plugin: 'java'
+
+repositories {
+    // Use 'jcenter' for resolving your dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    jcenter()
+    maven {
+        url "http://central.maven.org/maven2/"
+    }
+}
+
+dependencies {
+    testCompile (
+        "org.junit.jupiter:junit-jupiter-api:+",
+        "org.junit.jupiter:junit-jupiter-params:+",
+        "org.junit.jupiter:junit-jupiter-engine:+",
+    )
+
+}
+// Allow build to continue on test failure
+gradle.startParameter.continueOnFailure = true
