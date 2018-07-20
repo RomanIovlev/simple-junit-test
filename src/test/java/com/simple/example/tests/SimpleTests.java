@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class FCTServiceServiceTests implements ILog {
+public class SimpleTests implements ILog {
 
     @Test
     public void simpleTest() {
